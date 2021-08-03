@@ -46,6 +46,7 @@ class RestaurantTest {
     private void getAddToMenu() {
         restaurant.addToMenu("Sweet corn soup", 119);
         restaurant.addToMenu("Vegetable lasagne", 269);
+
     }
 
     @Test
@@ -80,9 +81,13 @@ class RestaurantTest {
     public void adding_items_in_the_list_should_show_the_total_amount_to_be_paid() {
         getAddToMenu();
 
-        List<String> listOfSelectedItems = null;
-        int expectedAmount = 339;
+        List<String> listOfSelectedItems = new ArrayList<>();
+        listOfSelectedItems.add("Sweet corn soup");
+        listOfSelectedItems.add("Vegetable lasagne");
+        int expectedAmount = 388;
         int actualAmount = restaurant.showTotalAmount(listOfSelectedItems);
+
+        assertEquals(expectedAmount,actualAmount);
 
     }
 
