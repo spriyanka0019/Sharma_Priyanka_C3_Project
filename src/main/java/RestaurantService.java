@@ -13,7 +13,7 @@ public class RestaurantService {
         throw new restaurantNotFoundException(restaurantName);
     }
 
-    
+
     public Restaurant addRestaurant(String name, String location, LocalTime openingTime, LocalTime closingTime) {
         Restaurant newRestaurant = new Restaurant(name, location, openingTime, closingTime);
         restaurants.add(newRestaurant);

@@ -16,7 +16,6 @@ class RestaurantTest {
         restaurant =new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
     }
 
-
     //>>>>>>>>>>>>>>>>>>>>>>>>>OPEN/CLOSED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
     public void is_restaurant_open_should_return_true_if_time_is_between_opening_and_closing_time(){
@@ -26,7 +25,6 @@ class RestaurantTest {
         boolean isRestaurantOpenOrNot = restaurantSpy.isRestaurantOpen();
 
         assertTrue(isRestaurantOpenOrNot);
-
     }
 
     @Test
@@ -37,9 +35,7 @@ class RestaurantTest {
         boolean isRestaurantOpenOrNot = restaurantSpy.isRestaurantOpen();
 
         assertFalse(isRestaurantOpenOrNot);
-
     }
-
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
